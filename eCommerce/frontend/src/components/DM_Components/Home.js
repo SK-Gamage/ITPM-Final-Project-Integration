@@ -69,7 +69,6 @@ export default class Home extends Component {
     const obj = {products: this.state.products }
     await axios.post('http://localhost:8070/generateproductreport', obj, { responseType: 'arraybuffer', headers: { Accept: 'application/pdf', }, }).then((res) => {
         toast.success('Report Generated',{position:toast.POSITION.TOP_CENTER});
-   // alert('Report Generated')
     
     console.log(res)
     console.log(res.data)
@@ -114,7 +113,7 @@ export default class Home extends Component {
                 </div>
                 <div className='col-lg-3 mt-2 mb-2'>
 
-                <button className="btn btn-info" type="button"
+                <button className="btn btn-secondary" type="button"
                 style={{textDecoration:'none',color:'white'}} 
                 onClick={this.generateReport}>Generate Report</button>
 

@@ -258,11 +258,15 @@ export default class CreateProducts extends Component {
           <select className="form-control" name="productCategory" placeholder="Enter Product Category" value={this.state.productCategory}
               onChange={this.handleInputChange} required>
                  <option value="">Enter Product Category</option>
-                 <option value="6 Month">Books</option>
-                 <option value="8 Month">Computers</option>
-                 <option value="1 Year">Electronics</option>
+                 <option value="Books">Books</option>
+                 <option value="Computers">Computers</option>
+                 <option value="Electronics">Electronics</option>
                  <option value="Men's Fashion">Men's Fashion</option>
                  <option value="Women's Fashion">Women's Fashion</option>
+                 <option value="Mobile Phones">Mobile Phones</option>
+                 <option value="Sports Outdoors">Sports Outdoors</option>
+                 <option value="Home And Kitchen">Home And Kitchen</option>
+                 <option value="Digital Music">Digital Music</option>
                  <option value="Others">Others</option>
                  
           </select>

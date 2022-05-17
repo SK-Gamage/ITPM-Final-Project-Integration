@@ -6,8 +6,17 @@ const cors = require('cors');
 
 require('dotenv').config();
 
+// app.use(bodyParser.json());
+// app.use(cors());
+
+
 //add modleware
-app.use(bodyParser.json());
+app.use(bodyParser.json({limit: '50mb'}) );
+app.use(bodyParser.urlencoded({
+  limit: '50mb',
+  extended: true,
+  parameterLimit:50000
+}));
 app.use(cors());
 
 const PORT = process.env.PORT || 8070;
