@@ -244,42 +244,42 @@ export default class CreateProducts extends Component {
             </div>
 
             <div className="col-md-6">
-            <label style={{marginBottom:'5px'}} className="form-label">Availability</label>
-            <select className="form-control" name="availability"  value={this.state.availability}
-                onChange={this.handleInputChange} maxLength ="1000" required>
-                <option value="">Enter Availability</option>
-                <option value="yes">In Stock</option>
-                <option value="no">Out Of Stock</option>
-            </select>
+                <label style={{marginBottom:'5px'}} className="form-label">Availability</label>
+                <select className="form-control" name="availability"  value={this.state.availability}
+                    onChange={this.handleInputChange} maxLength ="1000" required>
+                    <option value="">Enter Availability</option>
+                    <option value="yes">In Stock</option>
+                    <option value="no">Out Of Stock</option>
+                </select>
             </div>
 
             <div className="col-md-6">
-          <label style={{marginBottom:'5px'}} className="form-label">Category</label>
-          <select className="form-control" name="productCategory" placeholder="Enter Product Category" value={this.state.productCategory}
-              onChange={this.handleInputChange} required>
-                 <option value="">Enter Product Category</option>
-                 <option value="Books">Books</option>
-                 <option value="Computers">Computers</option>
-                 <option value="Electronics">Electronics</option>
-                 <option value="Men's Fashion">Men's Fashion</option>
-                 <option value="Women's Fashion">Women's Fashion</option>
-                 <option value="Mobile Phones">Mobile Phones</option>
-                 <option value="Sports Outdoors">Sports Outdoors</option>
-                 <option value="Home And Kitchen">Home And Kitchen</option>
-                 <option value="Digital Music">Digital Music</option>
-                 <option value="Others">Others</option>
-                 
-          </select>
-          </div>
+                <label style={{marginBottom:'5px'}} className="form-label">Category</label>
+                <select className="form-control" name="productCategory" placeholder="Enter Product Category" value={this.state.productCategory}
+                    onChange={this.handleInputChange} required>
+                        <option value="">Enter Product Category</option>
+                        <option value="Books">Books</option>
+                        <option value="Computers">Computers</option>
+                        <option value="Electronics">Electronics</option>
+                        <option value="Men's Fashion">Men's Fashion</option>
+                        <option value="Women's Fashion">Women's Fashion</option>
+                        <option value="Mobile Phones">Mobile Phones</option>
+                        <option value="Sports Outdoors">Sports Outdoors</option>
+                        <option value="Home And Kitchen">Home And Kitchen</option>
+                        <option value="Digital Music">Digital Music</option>
+                        <option value="Others">Others</option>
+                        
+                </select>
+            </div>
 
             <div className="mb-3">
-            <label style={{marginBottom:'5px'}} className="form-label">Description</label>
-            <textarea type="text"className="form-control" name="description" placeholder="Enter Description" value={this.state.description}
-                onChange={this.handleInputChange} maxLength ="1000"required/>
+                <label style={{marginBottom:'5px'}} className="form-label">Description</label>
+                <textarea type="text"className="form-control" name="description" placeholder="Enter Description" value={this.state.description}
+                    onChange={this.handleInputChange} maxLength ="1000"required/>
             </div>
 
             <div>
-            <FileBase64 type="file" name="image" multiple={ false } onDone={({ base64 }) => this.setState({ image: base64 })}/>
+                <FileBase64 type="file" name="image" multiple={ false } onDone={({ base64 }) => this.setState({ image: base64 })}/>
             </div>
    
             <button className="btn btn-primary font-weight-bold" type="submit" style={{marginBottom:'5px'}} onClick={this.onSubmit}>

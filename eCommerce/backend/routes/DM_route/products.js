@@ -3,7 +3,7 @@ const products = require ('../../models/DM_model/products');
 
 const router = express.Router();
 
-//save products 
+//Save products 
 router.route('/products/save').post((req, res) => {
     
     let newProducts = new products(req.body);
@@ -21,7 +21,7 @@ router.route('/products/save').post((req, res) => {
     });
 });
 
-//get products
+//Get products
 router.route('/products/displayProducts').get((req, res) => {
     products.find().exec((err, products) => {
 
@@ -38,7 +38,7 @@ router.route('/products/displayProducts').get((req, res) => {
     });
 });
 
-//get a specific products
+//Get a specific products
 router.route('/product/display/:id').get((req,res)=>{
     let productID = req.params.id;
 
@@ -53,8 +53,7 @@ router.route('/product/display/:id').get((req,res)=>{
     });
  });
 
- 
-//update products
+//Update products
 router.route('/product/update/:id').put((req,res)=>{
     products.findByIdAndUpdate(
         req.params.id,{
@@ -71,7 +70,6 @@ router.route('/product/update/:id').put((req,res)=>{
             });
         });
     });
-
 
 //Delete products
 router.route('/product/delete/:id').delete((req,res)=>{

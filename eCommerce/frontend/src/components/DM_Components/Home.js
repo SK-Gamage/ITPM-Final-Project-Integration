@@ -88,7 +88,7 @@ export default class Home extends Component {
                 <div className='row'>
                     <div className='col-lg-9 mt-2 mb-2'>
                     
-                    <h2>All Products</h2>
+                    <h2>ALL PRODUCTS</h2>
                 
                     </div>
                     <div className='col-lg-3 mt-2 mb-2'>
@@ -105,22 +105,52 @@ export default class Home extends Component {
                 <br/>
 
                 <div className='row'>
-                <div className='col-lg-9 mt-2 mb-2'>
+                    <div className='col-lg-9 mt-2 mb-2'>
+                        <button className="btn btn-success"> <a href="/save" 
+                        style={{textDecoration:'none', color:'white'}}>Create Product</a></button>
+                    </div>
+
+                    <div className='col-lg-3 mt-2 mb-2'>
+                        <button className="btn btn-secondary" type="button"
+                        style={{textDecoration:'none',color:'white'}} 
+                        onClick={this.generateReport}>Generate Report</button>
+                    </div>
+
+                    <div className="col-lg-3 mt-2 mb-2">
+                        <form className="dropdwonForm" onSubmit={this.handleSearchArea}>
+                            <label style={{ color:'black', fontWeight:700}}>Availibility : </label>
+                            <select className="btn btn-primary dropdown-toggle dropdown-toggle-split" onChange={this.handleSearchArea}>
+                                <option value="" >...</option>
+                                <option value="yes">In Stock</option>
+                                <option value="no">Out Of Stock</option>
+                            </select>
+                        </form>
+                    </div>
+                </div>
+
+                <br/>
+
+                <div className="availblebtn">
+
+                {/* <form  className="dropdwonForm" onSubmit={this.handleSearchArea}>
+                    <label style={{fontSize:'20px', color:'white', fontWeight:700}}>Catrgory :</label>
+                    <select className="dropDown" onChange={this.handleSearchArea}>
+                        <option value="" >..</option>
+                        <option value="Books">Books</option>
+                        <option value="Computers">Computers</option>
+                        <option value="Electronics">Electronics</option>
+                        <option value="Men's Fashion">Men's Fashion</option>
+                        <option value="Women's Fashion">Women's Fashion</option>
+                        <option value="Mobile Phones">Mobile Phones</option>
+                        <option value="Sports Outdoors">Sports Outdoors</option>
+                        <option value="Home And Kitchen">Home And Kitchen</option>
+                        <option value="Digital Music">Digital Music</option>
+                        <option value="Others">Others</option>
+                    </select>
+                </form>
+                &nbsp;&nbsp; */}
                 
-                <button className="btn btn-success"> <a href="/save" 
-                style={{textDecoration:'none', color:'white'}}>Create Product</a></button>
-
                 </div>
-                <div className='col-lg-3 mt-2 mb-2'>
-
-                <button className="btn btn-secondary" type="button"
-                style={{textDecoration:'none',color:'white'}} 
-                onClick={this.generateReport}>Generate Report</button>
-
-                </div>
-                </div>
-                
-                <br/><br/>
                 
                 <font size="2">
                 <table className="table">
@@ -154,7 +184,7 @@ export default class Home extends Component {
                                 <i className="far fa-edit"></i>&nbsp;
                             </a>
                             &nbsp;
-                            <a className="btn btn-danger" onClick={()=>this.onDelete(products._id)}>
+                            <a className="btn btn-danger" onClick={()=>this.onDelete(products._id)} href="/#">
                                 <i className="far fa-trash-alt"></i>&nbsp;
                             </a>
                         </td>
