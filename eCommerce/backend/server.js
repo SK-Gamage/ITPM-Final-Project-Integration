@@ -28,11 +28,11 @@ app.listen(PORT, () => {
 });
 
 //import routes
-const productRoutes = require('./routes/DM_route/products');
+const cartPDFRoutes = require('./routes/SK_route/carts');
 
 //routes
-app.use(productRoutes);
+app.use(CartRoutes);
 
 // report generate routes
-const productPDFRoutes = require ('./routes/DM_route/PDF_Generator/products_report');
-app.use(productPDFRoutes);
+const cartPDFRoutes = require ('./routes/SK_route/PDF_Generator/carts_report');
+app.use(cartPDFRoutes); 
